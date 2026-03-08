@@ -52,13 +52,13 @@ function Summary({ onClose }) {
           borderBottom: '1px solid var(--border-light)'
         }}>
           <div style={{ fontSize: '11px', color: 'var(--accent-mint)', fontWeight: 600, letterSpacing: '2px', marginBottom: '8px' }}>
-            SYSTEM PROPOSAL
+            BRANDING & UI/UX SYSTEM PROPOSAL
           </div>
-          <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px' }}>
-            UI/UX 체계 구축 제안
+          <h1 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px', lineHeight: 1.4 }}>
+            BIM 기술 홍보·시각화 체계를 위한<br />태성 브랜딩 및 UI/UX 시스템 구축 제안
           </h1>
           <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>
-            태성에스앤아이 — 지속 가능한 디자인 인프라
+            태성에스앤아이 — 기술과 시장을 연결하는 시각 인프라
           </p>
         </div>
 
