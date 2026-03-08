@@ -144,6 +144,102 @@ function Summary({ onClose }) {
             </div>
           </div>
 
+          {/* 디자인 시스템 구성요소 */}
+          <div style={{ 
+            padding: '20px', 
+            background: 'var(--bg-light)', 
+            borderRadius: '12px', 
+            marginBottom: '24px',
+            border: '1px solid var(--border-light)'
+          }}>
+            <div style={{ fontSize: '12px', fontWeight: 600, marginBottom: '16px', color: 'var(--text-black)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              🧩 디자인 시스템 구성요소
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+              {[
+                { 
+                  icon: 'Aa', 
+                  name: 'Typography', 
+                  items: ['Pretendard', '제목/본문/캡션', '줄간격 규칙'],
+                  color: '#6366f1'
+                },
+                { 
+                  icon: '◐', 
+                  name: 'Color', 
+                  items: ['브랜드 컬러', '시맨틱 컬러', '명암 시스템'],
+                  color: '#f59e0b'
+                },
+                { 
+                  icon: '▤', 
+                  name: 'Layout', 
+                  items: ['8px 그리드', '반응형 규칙', '여백 체계'],
+                  color: '#10b981'
+                },
+                { 
+                  icon: '◻', 
+                  name: 'Components', 
+                  items: ['버튼/입력창', '카드/테이블', '아이콘 세트'],
+                  color: '#ec4899'
+                }
+              ].map((item, i) => (
+                <div key={i} style={{ 
+                  padding: '14px 12px', 
+                  background: 'var(--bg-white)', 
+                  borderRadius: '10px',
+                  border: '1px solid var(--border-light)',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '8px', 
+                    background: `${item.color}15`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 10px',
+                    fontSize: '16px',
+                    fontWeight: 700,
+                    color: item.color
+                  }}>
+                    {item.icon}
+                  </div>
+                  <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                    {item.name}
+                  </div>
+                  <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.6 }}>
+                    {item.items.map((text, j) => (
+                      <div key={j}>{text}</div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ 
+              marginTop: '14px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              gap: '20px',
+              padding: '10px',
+              background: 'var(--bg-white)',
+              borderRadius: '8px',
+              border: '1px dashed var(--border-light)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--text-gray)' }}>
+                <span style={{ color: '#6366f1' }}>●</span> 규칙 정의
+              </div>
+              <div style={{ fontSize: '16px', color: 'var(--text-gray)' }}>→</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--text-gray)' }}>
+                <span style={{ color: '#10b981' }}>●</span> 컴포넌트화
+              </div>
+              <div style={{ fontSize: '16px', color: 'var(--text-gray)' }}>→</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--accent-mint)', fontWeight: 600 }}>
+                <span style={{ color: 'var(--accent-mint)' }}>●</span> 일관된 결과물
+              </div>
+            </div>
+          </div>
+
           {/* 실행 계획 */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '24px' }}>
             {/* 우선순위 */}
@@ -193,6 +289,84 @@ function Summary({ onClose }) {
                     <span style={{ color: 'var(--text-black)' }}>{item.desc}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* 벤치마킹 — 글로벌 기업 참고 */}
+          <div style={{ 
+            padding: '20px', 
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', 
+            borderRadius: '12px', 
+            marginBottom: '24px',
+            border: '1px solid rgba(255,255,255,0.1)'
+          }}>
+            <div style={{ fontSize: '11px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.6)', letterSpacing: '1px', textAlign: 'center' }}>
+              🎯 DESIGN SYSTEM BENCHMARK
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+              {[
+                { 
+                  name: 'Autodesk', 
+                  desc: 'BIM 소프트웨어 글로벌 1위',
+                  insight: '제품 간 일관된 UX로 학습비용 최소화',
+                  color: '#00bfff',
+                  logo: '◈'
+                },
+                { 
+                  name: 'Oracle Cloud', 
+                  desc: '엔터프라이즈 클라우드 리더',
+                  insight: 'Redwood Design System으로 통합 경험 제공',
+                  color: '#ff0000',
+                  logo: '◉'
+                }
+              ].map((item, i) => (
+                <div key={i} style={{ 
+                  padding: '16px', 
+                  background: 'rgba(255,255,255,0.05)', 
+                  borderRadius: '10px',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  position: 'relative',
+                  overflow: 'hidden'
+                }}>
+                  <div style={{ 
+                    position: 'absolute', 
+                    top: '-20px', 
+                    right: '-10px', 
+                    fontSize: '60px', 
+                    opacity: 0.1, 
+                    color: item.color 
+                  }}>{item.logo}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                    <div style={{ 
+                      width: '8px', 
+                      height: '8px', 
+                      borderRadius: '50%', 
+                      background: item.color,
+                      boxShadow: `0 0 8px ${item.color}`
+                    }} />
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#fff' }}>{item.name}</span>
+                  </div>
+                  <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', marginBottom: '6px' }}>{item.desc}</div>
+                  <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.4 }}>
+                    → {item.insight}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ 
+              marginTop: '16px', 
+              padding: '12px', 
+              background: 'rgba(255,255,255,0.05)', 
+              borderRadius: '8px',
+              textAlign: 'center',
+              borderLeft: '3px solid var(--accent-mint)'
+            }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--accent-mint)', marginBottom: '4px' }}>
+                태성에스엔아이 적용 방향
+              </div>
+              <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>
+                BIM 기술 특화 디자인 시스템 → 플랫폼 일관성 확보 + 기술 홍보 차별화
               </div>
             </div>
           </div>
