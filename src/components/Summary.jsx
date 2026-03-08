@@ -55,8 +55,8 @@ function Summary({ onClose }) {
           <div style={{ fontSize: '13px', color: 'var(--text-gray)', fontWeight: 500, marginBottom: '8px' }}>
             BIM 기술홍보 · 시각화 체계를 위한
           </div>
-          <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px', lineHeight: 1.3 }}>
-            태성에스엔아이 브랜딩 및<br />UI/UX 시스템 구축 제안
+          <h1 style={{ fontSize: '26px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px', lineHeight: 1.3 }}>
+            태성에스엔아이 브랜드가이드라인 및<br />디자인 시스템 구축 제안
           </h1>
           <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>
             기술과 시장을 연결하는 시각 인프라
@@ -79,7 +79,7 @@ function Summary({ onClose }) {
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', fontSize: '11px' }}>
               {[
-                { issue: '제안서/PT 제작', problem: '매번 새로 제작', impact: '시간·비용 중복' },
+                { issue: '제안서/PT 제작', problem: '재사용 체계 부재', impact: '시간·비용 중복' },
                 { issue: '디자인 일관성', problem: '담당자별 상이', impact: '브랜드 신뢰도 저하' },
                 { issue: '자료 공유', problem: '공유 체계 부재', impact: '재작업 발생' }
               ].map((item, i) => (
@@ -415,7 +415,7 @@ function Summary({ onClose }) {
               "담당자가 바뀌어도, 일관된 품질을 유지하는 시스템"
             </div>
             <div style={{ fontSize: '11px', color: 'var(--text-gray)' }}>
-              사람에 의존하지 않는, 지속 가능한 디자인 인프라 구축
+              누구나 일관된 결과물을 만들 수 있는, 지속 가능한 디자인 인프라
             </div>
           </div>
 

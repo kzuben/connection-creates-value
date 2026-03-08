@@ -26,7 +26,7 @@ function Tab1({ currentSlide, onSlideChange }) {
       <section className={`slide content-slide ${currentSlide === 0 ? 'active' : ''}`}>
         <div className="slide-left mint-section">
           <div className="slide-label">Overview</div>
-          <h2 className="slide-title">Strategy<br />요약</h2>
+          <h2 className="slide-title">Strategy<br />정리</h2>
           <p className="slide-desc">이 탭에서 다루는 내용</p>
           <p style={{ fontSize: '13px', color: 'var(--text-gray)', marginTop: '12px', fontStyle: 'italic' }}>
             "Tech Communicator가 무엇이고, 어떤 가치를 제공하는지"
