@@ -49,16 +49,17 @@ function Summary({ onClose }) {
         {/* Header */}
         <div style={{ 
           padding: '40px 40px 20px',
-          borderBottom: '1px solid var(--border-light)'
+          borderBottom: '1px solid var(--border-light)',
+          textAlign: 'center'
         }}>
-          <div style={{ fontSize: '11px', color: 'var(--accent-mint)', fontWeight: 600, letterSpacing: '2px', marginBottom: '8px' }}>
-            BRANDING & UI/UX SYSTEM PROPOSAL
+          <div style={{ fontSize: '13px', color: 'var(--text-gray)', fontWeight: 500, marginBottom: '8px' }}>
+            BIM 기술홍보 · 시각화 체계를 위한
           </div>
-          <h1 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px', lineHeight: 1.4 }}>
-            BIM 기술 홍보·시각화 체계를 위한<br />태성 브랜딩 및 UI/UX 시스템 구축 제안
+          <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--text-black)', marginBottom: '8px', lineHeight: 1.3 }}>
+            태성에스엔아이 브랜딩 및<br />UI/UX 시스템 구축 제안
           </h1>
           <p style={{ fontSize: '14px', color: 'var(--text-gray)' }}>
-            태성에스앤아이 — 기술과 시장을 연결하는 시각 인프라
+            기술과 시장을 연결하는 시각 인프라
           </p>
         </div>
 
