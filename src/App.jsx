@@ -15,7 +15,7 @@ function App() {
   const tabs = [
     { name: 'Strategy', count: 16 },
     { name: 'Connect', count: 14 },
-    { name: 'Wireframe', count: 11 }
+    { name: 'Wireframe', count: 9 }
   ]
 
   const slideCount = tabs[activeTab].count

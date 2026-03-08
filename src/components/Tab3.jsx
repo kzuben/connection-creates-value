@@ -12,7 +12,7 @@ function Tab3({ currentSlide, onSlideChange }) {
 
     const handleWheel = (e) => {
       e.preventDefault()
-      if (e.deltaY > 0) onSlideChange(Math.min(currentSlide + 1, 10))
+      if (e.deltaY > 0) onSlideChange(Math.min(currentSlide + 1, 8))
       else onSlideChange(Math.max(currentSlide - 1, 0))
     }
 
@@ -446,100 +446,114 @@ function Tab3({ currentSlide, onSlideChange }) {
         </div>
       </section>
 
-      {/* SLIDE 7: CTA */}
+      {/* SLIDE 7: CTA - AI Voice-to-Ticket Demo */}
       <section className={`slide content-slide ${currentSlide === 7 ? 'active' : ''}`}>
-        <div className="slide-left">
-          <div className="slide-label">CTA</div>
-          <h2 className="slide-title">데모<br />체험하기</h2>
-          <p className="slide-desc">지금 바로 경험해보세요</p>
+        <div className="slide-left" style={{ background: 'linear-gradient(180deg, #f0f4ff 0%, #e8f4f8 100%)' }}>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%)', borderRadius: '50%' }} />
         </div>
-        <div className="slide-right">
-          <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-            <div style={{ width: '150px', height: '150px', background: 'white', borderRadius: '16px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid var(--border-light)', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
-              <div style={{ width: '120px', height: '120px', background: 'linear-gradient(135deg, var(--bg-mint) 0%, rgba(99,102,241,0.2) 100%)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '48px' }}>📱</span>
-              </div>
+        <div className="slide-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          {/* AI Voice Demo Card */}
+          <div style={{ background: 'white', borderRadius: '16px', padding: '20px 30px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', marginBottom: '24px', textAlign: 'center', border: '1px solid var(--border-light)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '12px' }}>
+              <span style={{ fontSize: '20px' }}>✏️</span>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-black)' }}>AI Voice-to-Ticket Demo</span>
             </div>
-            <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-black)', marginBottom: '8px' }}>QR 스캔으로 데모 체험</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-gray)', marginBottom: '20px' }}>모바일에서 직접 기능을 테스트해보세요</div>
-            <button style={{ padding: '14px 32px', background: 'var(--accent-mint)', color: 'white', border: 'none', borderRadius: '30px', fontSize: '14px', fontWeight: 600, cursor: 'pointer', boxShadow: '0 4px 15px rgba(0, 195, 154, 0.3)' }}>문의하기 →</button>
+            <button style={{ padding: '10px 24px', background: '#4F8CFF', color: 'white', border: 'none', borderRadius: '20px', fontSize: '13px', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', margin: '0 auto' }}>
+              <span>🎤</span> 음성 인식 시작
+            </button>
           </div>
-        </div>
-      </section>
 
-      {/* SLIDE 8: 기술 스펙 */}
-      <section className={`slide content-slide ${currentSlide === 8 ? 'active' : ''}`}>
-        <div className="slide-left mint-section">
-          <div className="slide-label">Appendix</div>
-          <h2 className="slide-title">기술<br />스펙</h2>
-          <p className="slide-desc">구현 기술 상세</p>
-        </div>
-        <div className="slide-right">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-            {[
-              { title: 'Frontend', items: ['React 18+', 'TypeScript', 'Tailwind CSS', 'Three.js (3D)'] },
-              { title: 'Backend', items: ['Node.js', 'GraphQL API', 'PostgreSQL', 'Redis Cache'] },
-              { title: 'Infrastructure', items: ['AWS/Azure', 'Docker/K8s', 'CI/CD Pipeline', 'CDN'] },
-              { title: 'Security', items: ['OAuth 2.0', 'JWT Token', 'RBAC', 'Data Encryption'] }
-            ].map((section, i) => (
-              <div key={i} style={{ background: 'var(--bg-light)', borderRadius: '12px', padding: '14px', border: '1px solid var(--border-light)' }}>
-                <div style={{ fontSize: '11px', fontWeight: 600, marginBottom: '10px', color: 'var(--accent-mint)' }}>{section.title}</div>
-                {section.items.map((item, j) => (
-                  <div key={j} style={{ fontSize: '10px', color: 'var(--text-gray)', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span style={{ color: 'var(--accent-mint)' }}>•</span> {item}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SLIDE 9: 결론 */}
-      <section className={`slide content-slide ${currentSlide === 9 ? 'active' : ''}`}>
-        <div className="slide-left">
-          <div className="slide-label">Conclusion</div>
-          <h2 className="slide-title">결론</h2>
-          <p className="slide-desc">Wireframe Summary</p>
-        </div>
-        <div className="slide-right">
-          <div style={{ textAlign: 'center', padding: '30px 20px' }}>
-            <div style={{ fontSize: '48px', marginBottom: '20px' }}>🎯</div>
-            <div style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '16px' }}>기술을 체험하게 하십시오</div>
-            <div style={{ fontSize: '13px', color: 'var(--text-gray)', lineHeight: 1.8, marginBottom: '30px' }}>
-              역할별 맞춤 UI로 고객이 직접<br />
-              기술의 가치를 경험하도록 설계합니다.<br /><br />
-              글로벌 시장을 향한 확장성 있는<br />
-              디자인 시스템을 제안합니다.
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
-              {['🌏 글로벌', '📱 반응형', '🎨 맞춤 UX'].map((item, i) => (
-                <span key={i} style={{ fontSize: '11px', padding: '8px 16px', background: 'var(--bg-mint)', borderRadius: '20px', color: 'var(--accent-mint)', fontWeight: 600 }}>{item}</span>
+          {/* QR Code */}
+          <div style={{ background: 'white', borderRadius: '16px', padding: '16px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', marginBottom: '24px', border: '1px solid var(--border-light)' }}>
+            <div style={{ width: '120px', height: '120px', background: '#1a1a2e', borderRadius: '8px', display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gridTemplateRows: 'repeat(7, 1fr)', gap: '2px', padding: '8px' }}>
+              {Array(49).fill(0).map((_, i) => (
+                <div key={i} style={{ background: [0,1,2,4,5,6,7,8,13,14,20,21,27,28,34,35,41,42,43,44,45,46,47,48].includes(i) ? '#4F8CFF' : 'transparent', borderRadius: '2px' }} />
               ))}
             </div>
+            <div style={{ fontSize: '11px', color: 'var(--text-gray)', marginTop: '10px', textAlign: 'center' }}>QR 스캔으로 데모 체험</div>
+          </div>
+
+          {/* CTA Text */}
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+            <div style={{ fontSize: '22px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>지금 바로 체험하세요</div>
+            <div style={{ fontSize: '13px', color: 'var(--text-gray)' }}>설치 없이 3초 만에 시작</div>
+          </div>
+
+          {/* Buttons */}
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <button style={{ padding: '12px 24px', background: '#4F8CFF', color: 'white', border: 'none', borderRadius: '25px', fontSize: '13px', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>💬</span> 문의하기
+            </button>
+            <button style={{ padding: '12px 24px', background: 'white', color: 'var(--text-black)', border: '1px solid var(--border-light)', borderRadius: '25px', fontSize: '13px', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>📥</span> 브로슈어
+            </button>
           </div>
         </div>
       </section>
 
-      {/* SLIDE 10: END */}
-      <section className={`slide content-slide ${currentSlide === 10 ? 'active' : ''}`}>
-        <div className="slide-left mint-section">
-          <div className="slide-label">END</div>
-          <h2 className="slide-title">Thank<br />You</h2>
-          <p className="slide-desc">감사합니다</p>
+      {/* SLIDE 8: Thanks for Watching */}
+      <section className={`slide closing-slide ${currentSlide === 8 ? 'active' : ''}`}>
+        <h1 className="closing-title" style={{ fontSize: '72px', fontWeight: 900, fontStyle: 'italic', color: 'var(--text-black)', marginBottom: '8px' }}>THANKS.</h1>
+        <p className="closing-subtitle" style={{ fontSize: '28px', color: '#4F8CFF', fontWeight: 300, letterSpacing: '8px', marginBottom: '24px' }}>FOR WATCHING</p>
+        <p style={{ fontSize: '14px', color: 'var(--text-gray)', maxWidth: '500px', lineHeight: 1.8, marginBottom: '32px', textAlign: 'center' }}>
+          "시작은 조용히 되어 가지를 걸어가고, 단계별로 성과를 만들어 가겠습니다."
+        </p>
+
+        {/* 핵심 지향점 */}
+        <div style={{ fontSize: '12px', color: '#f59e0b', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span>🎯</span> 핵심 지향 및 약속 (수시 사항)
         </div>
-        <div className="slide-right">
-          <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-            <div style={{ fontSize: '60px', marginBottom: '20px' }}>🏗️</div>
-            <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '12px' }}>TAESUNG S&I</div>
-            <div style={{ fontSize: '14px', color: 'var(--accent-mint)', marginBottom: '30px' }}>Building Digital Future</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-gray)' }}>contact@taesung.co.kr</div>
+
+        {/* 4개 카드 그리드 */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', maxWidth: '540px', marginBottom: '32px' }}>
+          <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '2px solid #4F8CFF', textAlign: 'center' }}>
+            <div style={{ fontSize: '24px', marginBottom: '8px', color: '#4F8CFF' }}>✓</div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '6px' }}>시범 운용 우선</div>
+            <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>최대한 무상으로 혹은 최소한의 비용을 지원받아 렌더링 자료를 기반으로 시작합니다.</div>
+          </div>
+          <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '2px solid #4F8CFF', textAlign: 'center' }}>
+            <div style={{ fontSize: '24px', marginBottom: '8px', color: '#4F8CFF' }}>📊</div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '6px' }}>지속 가능한 체계</div>
+            <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>퇴직 담당자가 대체가능 관리되는, 누구나 활용할 수 있는 체계를 만들었습니다.</div>
+          </div>
+          <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '2px solid #FFB347', textAlign: 'center' }}>
+            <div style={{ fontSize: '24px', marginBottom: '8px', color: '#FFB347' }}>🏠</div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '6px' }}>단계별 성과 추진</div>
+            <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>무상으로도 가치, 유효한 가치의 가치적 지원을 받아 성과 가치를 점진적으로 만들겠습니다.</div>
+          </div>
+          <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '2px solid #FFB347', textAlign: 'center' }}>
+            <div style={{ fontSize: '24px', marginBottom: '8px', color: '#FFB347' }}>💎</div>
+            <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '6px' }}>검증 기준 제시</div>
+            <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>적은 투자로 더 높은 ROI를 얻을 수 있다는 검증을 데이터로 입증하겠습니다.</div>
+          </div>
+        </div>
+
+        {/* 로고 */}
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ width: '40px', height: '40px', background: 'var(--accent-mint)', borderRadius: '8px' }} />
+          <div style={{ width: '40px', height: '40px', background: '#4F8CFF', borderRadius: '8px' }} />
+          <div style={{ width: '40px', height: '40px', background: '#00A88A', borderRadius: '8px' }} />
+        </div>
+
+        {/* Contact */}
+        <div className="contact-grid">
+          <div className="contact-item">
+            <div className="contact-label">WEBSITE</div>
+            <div className="contact-value">www.taesung.kr</div>
+          </div>
+          <div className="contact-item">
+            <div className="contact-label">EMAIL</div>
+            <div className="contact-value">jiukim@tssni.com</div>
+          </div>
+          <div className="contact-item">
+            <div className="contact-label">PHONE</div>
+            <div className="contact-value">010-2127-0727</div>
           </div>
         </div>
       </section>
 
       {/* 슬라이드 인디케이터 */}
-      <div className="slide-indicator">{currentSlide + 1} / 11</div>
+      <div className="slide-indicator">{currentSlide + 1} / 9</div>
     </div>
   )
 }
