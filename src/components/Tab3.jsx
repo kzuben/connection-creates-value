@@ -89,6 +89,13 @@ function Tab3({ currentSlide, onSlideChange }) {
               <span key={i} style={{ fontSize: '9px', padding: '4px 8px', background: 'var(--bg-mint)', borderRadius: '10px', color: 'var(--accent-mint)' }}>{tag}</span>
             ))}
           </div>
+          <div style={{ marginTop: '10px', padding: '10px', background: 'var(--bg-light)', borderRadius: '10px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-black)', marginBottom: '4px' }}>Micro-Interaction</div>
+            <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>
+              버튼 클릭, 카드 호버, 데이터 로딩에 섬세한 모션을 넣어
+              <br />단순 웹페이지가 아니라 디지털 트윈 플랫폼의 ‘고급감’을 전달합니다.
+            </div>
+          </div>
         </div>
         <div className="slide-right">
           <div style={{ background: '#1a1a2e', borderRadius: '16px', padding: '12px', minHeight: '400px', position: 'relative', overflow: 'hidden' }}>

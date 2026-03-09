@@ -964,8 +964,8 @@ function Tab1({ currentSlide, onSlideChange }) {
               },
               { 
                 step: '3', 
-                title: '소스 라이브러리', 
-                desc: 'BIM 렌더링, 드론 영상, 시뮬레이션 GIF 아카이빙',
+                title: '소스·모션 라이브러리', 
+                desc: 'BIM 렌더링, 드론 영상과 함께 Explainer Motion(간섭·4D 공정 해설 숏폼) 아카이빙',
                 color: '#6366F1',
                 graphic: (
                   <svg width="60" height="60" viewBox="0 0 60 60">
@@ -983,7 +983,7 @@ function Tab1({ currentSlide, onSlideChange }) {
               { 
                 step: '4', 
                 title: '자동화 도구', 
-                desc: 'Figma Components 및 PPT 마스터 슬라이드 배포',
+                desc: 'Figma 컴포넌트·PPT 마스터와 모듈형 영상 템플릿으로 “30분 내 기술 홍보 영상 제작” 체계 구현',
                 color: '#F97316',
                 graphic: (
                   <svg width="60" height="60" viewBox="0 0 60 60">

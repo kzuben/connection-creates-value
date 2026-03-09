@@ -435,6 +435,27 @@ function Tab2({ currentSlide, onSlideChange }) {
               <div className="stat-label">최적화 용량</div>
             </div>
           </div>
+          {/* Explainer Motion & 모듈형 영상 템플릿 */}
+          <div style={{ marginTop: '18px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            <div style={{ padding: '10px 12px', borderRadius: '10px', background: 'var(--bg-light)', border: '1px solid var(--border-light)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-black)', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span>🎬</span> Explainer Motion Library
+              </div>
+              <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>
+                BIM 간섭 체크, 4D 공정 시뮬레이션 등 정지 화면으로 어려운 내용을
+                <br />15~30초 숏폼 모션으로 규격화해 제안서·SNS에 재사용.
+              </div>
+            </div>
+            <div style={{ padding: '10px 12px', borderRadius: '10px', background: 'var(--bg-light)', border: '1px solid var(--border-light)' }}>
+              <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-black)', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span>🧩</span> 모듈형 영상 템플릿
+              </div>
+              <div style={{ fontSize: '10px', color: 'var(--text-gray)', lineHeight: 1.5 }}>
+                배경·텍스트 슬롯·BIM 영역을 템플릿화하여
+                <br />디자이너 없이도 30분 내 기술 홍보 영상 제작이 가능하도록 설계.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -463,7 +484,8 @@ function Tab2({ currentSlide, onSlideChange }) {
               { icon: 'Aa', name: 'Typography', items: '제목/본문/캡션 규칙', color: '#6366f1' },
               { icon: '◐', name: 'Color', items: '브랜드·시맨틱 컬러', color: '#f59e0b' },
               { icon: '▤', name: 'Layout', items: '8px 그리드·여백 체계', color: '#10b981' },
-              { icon: '◻', name: 'Components', items: '버튼·카드·테이블', color: '#ec4899' }
+              { icon: '◻', name: 'Components', items: '버튼·카드·테이블', color: '#ec4899' },
+              { icon: '✨', name: 'Motion', items: '마이크로 인터랙션·전환 모션', color: '#a855f7' }
             ].map((item, i) => (
               <div key={i} style={{ padding: '14px', background: 'var(--bg-light)', borderRadius: '10px', border: '1px solid var(--border-light)', textAlign: 'center' }}>
                 <div style={{ 
